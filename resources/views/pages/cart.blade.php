@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-5">
       <form :action="actionUrl" method="post" @submit.prevent="submitAdd($event)">
         @csrf
         <div class="card">
@@ -51,10 +51,10 @@
               <div class="col-md-7">
                 <input type="text" name="product" id="product" class="form-control" v-model="product.name" placeholder="Product name" disabled>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-3">
                 <input type="number" min="1" id="qty" name="qty" class="form-control" placeholder="Qty" required>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2">
                 <button type="submit" class="btn btn-block btn-primary">Add</button>
               </div>
             </div>
@@ -62,10 +62,10 @@
         </div>
       </form>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="card">
         <div class="card-body text-right mb-1">
-          <h2>No. @{{ invoice }}</h2>
+          <h3>No. @{{ invoice }}</h3>
           <h1 class="text-success">Rp. @{{ formatRupiah(total) }}</h1>
         </div>
       </div>
