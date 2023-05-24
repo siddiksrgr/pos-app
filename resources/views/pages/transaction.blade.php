@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Sales')
+
 @section('header', 'Sales')
 
 @section('content')

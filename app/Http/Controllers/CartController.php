@@ -64,11 +64,9 @@ class CartController extends Controller
     {
         $carts = Cart::all();
         if($carts) {
-            $total = 0;
-            foreach($carts as $cart) {
-                $subtotal = $cart->product->sell_price * $cart->qty;
-                $total+=$subtotal;
-            }
+            $total = $carts->reduce(function($carry, $item){
+                return $carry + ($item->product->sell_price * $item->qty);
+            });
         } else {
             $total = 0;
         }

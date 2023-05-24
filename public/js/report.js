@@ -13,6 +13,22 @@ var controller = new Vue({
             const _this = this;
             _this.table = $("#datatable")
                 .DataTable({
+                    dom: "Bfrtip",
+                    buttons: [
+                        {
+                            extend: "print",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        {
+                            extend: "pdf",
+                            exportOptions: {
+                                columns: ":visible",
+                            },
+                        },
+                        "colvis",
+                    ],
                     ajax: {
                         url: _this.apiUrl,
                         type: "GET",

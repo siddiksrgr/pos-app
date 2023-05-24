@@ -24,7 +24,7 @@ class TransactionController extends Controller
 
     public function api()
     {
-        $transactions = Transaction::with('transaction_details.product')->get();
+        $transactions = Transaction::with('transaction_details.product');
 
         $datatables = datatables()->of($transactions)
                             ->addColumn('customer_code', function($transaction){

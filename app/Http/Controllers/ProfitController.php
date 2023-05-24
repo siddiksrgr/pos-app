@@ -15,7 +15,7 @@ class ProfitController extends Controller
 
     public function api()
     {
-        $profits = Transaction::with('transaction_details.product')->get();
+        $profits = Transaction::with('transaction_details.product');
 
         $datatables = datatables()->of($profits)
                             ->addColumn('invoice', function($profit){

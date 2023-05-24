@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     public function api()
     {
-        $products = Product::with('category')->get();
+        $products = Product::with('category');
 
         $datatables = datatables()->of($products)
                                 ->addColumn('category', function($product){

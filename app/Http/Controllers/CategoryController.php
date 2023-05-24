@@ -19,7 +19,7 @@ class CategoryController extends Controller
 
     public function api()
     {
-        $categories = Category::with('products')->get();
+        $categories = Category::with('products');
 
         $datatables = datatables()->of($categories)
                             ->addColumn('total_products', function($category){
