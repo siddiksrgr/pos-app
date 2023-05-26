@@ -5,7 +5,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="" class="h1">Point Of Sale</a>
+      <a href="" class="h1">SMART POS</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
