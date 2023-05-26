@@ -4,7 +4,7 @@ The project was created using Laravel 8 and VueJs 2.
 
 ## Installation
 
--   `git clone https://github.com/siddiksrgr/pos-app.git project-name `
+-   `git clone https://github.com/siddiksrgr/smart-pos.git project-name `
 -   `cd project-name`
 -   `composer install`
 -   `cp .env.example .env`
